@@ -20,9 +20,8 @@ Usage:
 Archive all completed tasks from a file.
 
 Usage:
-`cria archive <path> --to <path>` -> write all completed tasks from the first file to the second.
+`cria archive <from> <to>` -> write all completed tasks from the first file to the second.
 
 #### Arguments
-`--to <path>`: the path of the file to which the completed tasks should be prepended
 `--no-strip`: does not remove the `x` literal denoting a completed task
 `--date`: the date literal to be prepended to the task. Defaults to YYYY-MM-DD
