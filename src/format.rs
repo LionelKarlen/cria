@@ -55,7 +55,6 @@ fn format_todo_lines(todos: &str) -> String {
         }
     }
 
-    marked.reverse();
     if !marked.is_empty() {
         let m = marked.join("\n");
         total.push(m);
