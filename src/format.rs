@@ -90,13 +90,13 @@ x completed";
     }
 
     #[test]
-    fn test_format_reverse_dotted() {
+    fn test_format_dotted() {
         let input = "x completed
         . dotted
         . second dotted
         regular";
-        let output = ". second dotted
-. dotted
+        let output = ". dotted
+. second dotted
 regular
 
 x completed";
