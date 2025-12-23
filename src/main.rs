@@ -1,8 +1,13 @@
 use clap::{Parser, Subcommand};
+use miette::Result;
 
-use crate::{archive::ArchiveArgs, format::FormatArgs};
+use crate::{
+    archive::ArchiveArgs,
+    format::{FormatArgs, run_format_command},
+};
 mod archive;
 mod format;
+mod todo;
 
 #[derive(Parser)]
 #[command(version, about)]
@@ -20,11 +25,11 @@ enum Commands {
     Archive(ArchiveArgs),
 }
 
-fn main() {
+fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match &cli.command {
-        Commands::Format(format_args) => todo!(),
+        Commands::Format(format_args) => run_format_command(format_args),
         Commands::Archive(archive_args) => todo!(),
     }
 }
