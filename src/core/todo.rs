@@ -10,7 +10,7 @@ pub struct Todo {
 }
 
 impl Todo {
-    pub fn from_file_text(file_text: &str) -> Vec<Todo> {
+    pub fn from_lines(file_text: &str) -> Vec<Todo> {
         file_text
             .lines()
             .filter_map(|line| {

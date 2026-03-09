@@ -1,9 +1,9 @@
 use clap::{Parser, Subcommand};
 use miette::Result;
 
-use crate::format::{FormatArgs, run_format_command};
-mod format;
-mod todo;
+use crate::cli::format::{FormatArgs, run_format_command};
+mod cli;
+mod core;
 
 #[derive(Parser)]
 #[command(version, about)]
@@ -15,7 +15,6 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     /// Format the given file with `marked` entries first, regular entries second, completed entries last.
-    /// `marked` entries are sorted in reverse order, the rest is left in file order.
     Format(FormatArgs),
 }
 
